@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { BookOpen, Brain, UploadCloud, Moon, Sun, LogOut, LogIn, UserPlus, User } from 'lucide-react';
+import { BookOpen, Brain, UploadCloud, Moon, Sun, LogOut, LogIn, UserPlus, User, Info } from 'lucide-react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useStudyStore } from '../stores/useStudyStore';
 import { useAuthStore } from '../stores/useAuthStore';
@@ -60,6 +60,17 @@ export const MainLayout: React.FC = () => {
           </div>
 
           <div className="navbar-end gap-2">
+            <Link
+              to="/about"
+              aria-label="เกี่ยวกับ AI Study Buddy"
+              className={`btn btn-ghost btn-sm rounded-lg gap-1.5 ${
+                location.pathname === '/about' ? 'text-primary' : ''
+              }`}
+            >
+              <Info className="w-4 h-4" />
+              <span className="hidden sm:inline">เกี่ยวกับ</span>
+            </Link>
+
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
