@@ -12,11 +12,11 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: '[https://ai-study-buddy-backend-am3r.onrender.com](https://ai-study-buddy-backend-am3r.onrender.com)',
+        target: 'https://ai-study-buddy-backend-am3r.onrender.com',
         changeOrigin: true,
       },
       '/uploads': {
-        target: '[https://ai-study-buddy-backend-am3r.onrender.com](https://ai-study-buddy-backend-am3r.onrender.com)',
+        target: 'https://ai-study-buddy-backend-am3r.onrender.com',
         changeOrigin: true,
       },
     },
