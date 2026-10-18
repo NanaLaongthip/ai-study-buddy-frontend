@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from './components/MainLayout';
+import AboutPage from './pages/AboutPage';
 import DashboardPage from './pages/DashboardPage';
 import SummaryPage from './pages/SummaryPage';
 import QuizPage from './pages/QuizPage';
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         element: <RegisterPage />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
       },
       {
         index: true,
