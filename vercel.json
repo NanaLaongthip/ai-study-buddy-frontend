@@ -7,6 +7,10 @@
     {
       "source": "/uploads/:path*",
       "destination": "https://ai-study-buddy-backend-am3r.onrender.com/uploads/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
